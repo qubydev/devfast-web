@@ -10,8 +10,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "DevStart",
-  description: "Fastest development setup templates",
+  title: "devfast",
+  description: "Fastest way to setup your new project.",
 };
 
 export default function RootLayout({
