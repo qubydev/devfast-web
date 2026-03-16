@@ -17,7 +17,7 @@ export default async function Navbar() {
 
     return (
         <div className="fixed top-0 left-0 w-full bg-card">
-            <nav className=" border-b h-14 flex items-center px-4">
+            <nav className=" border-b h-14 flex items-center px-4 gap-2">
                 <Link href="/" className="flex items-center">
                     <Image
                         alt="Logo"
@@ -31,7 +31,13 @@ export default async function Navbar() {
 
                 <div className="flex-1" />
 
-                {session ? (
+                <Link href="/install">
+                    <Button>
+                        Install
+                    </Button>
+                </Link>
+
+                {session && (
                     <DropdownMenu>
                         <DropdownMenuTrigger className="rounded-full">
                             <Avatar className="border-2 border-primary size-10">
@@ -47,10 +53,6 @@ export default async function Navbar() {
                             <LogoutButton className="w-full mt-2" variant="destructive" />
                         </DropdownMenuContent>
                     </DropdownMenu>
-                ) : (
-                    <Link href="/login">
-                        <Button>Login</Button>
-                    </Link>
                 )}
             </nav>
         </div>

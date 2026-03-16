@@ -4,8 +4,7 @@ import { LoginButtons } from "@/components/client/login-buttons"
 export default function Login() {
     return (
         <div className="h-[calc(100vh-var(--spacing)*14)] flex overflow-hidden">
-
-            <div className="flex-1 h-full flex justify-center items-center flex-col px-6">
+            <div className="flex-1 h-full flex justify-center items-center flex-col px-6 relative bottom-12">
                 <Image
                     alt="Logo"
                     src="/logo.png"
@@ -20,19 +19,6 @@ export default function Login() {
                     <LoginButtons />
                 </div>
             </div>
-
-            <div className="hidden lg:block relative flex-1 h-full">
-                <Image
-                    src="/bg1.png"
-                    alt="Banner"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/5 to-transparent" />
-            </div>
-
         </div>
     )
 }
