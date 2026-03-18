@@ -61,9 +61,11 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
                 <span className="text-primary/70 text-sm font-mono mb-4">{template.id}</span>
 
                 {template.description && (
-                    <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                        {template.description}
-                    </p>
+                    <pre>
+                        <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                            {template.description}
+                        </p>
+                    </pre>
                 )}
 
                 <div className="flex flex-wrap gap-2 mb-10">
